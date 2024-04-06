@@ -1,0 +1,31 @@
+@mixin setFont($typeface, $size, $weight) {
+  font-family: $typeface;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin setFlex($flexType, $direction, $justifyType, $alignType) {
+  display: $flexType;
+  flex-direction: $direction;
+  justify-content: $justifyType;
+  align-items: $alignType;
+}
+
+//Responsive
+@mixin sm {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
